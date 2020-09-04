@@ -1,5 +1,5 @@
 {
-    "name": "ChaoticBear/BridgeInteractiveZillow",
+    "name": "chaoticbear/bridge-interactive-zillow",
     "type": "library",
     "description": "Zillow API through Bridge Interactive Client",
     "homepage": "https://github.com/chaoticbear/bridge-interactive-zillow",
