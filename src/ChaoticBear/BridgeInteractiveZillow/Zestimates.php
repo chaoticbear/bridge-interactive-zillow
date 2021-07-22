@@ -79,10 +79,14 @@ class Zestimates {
     public function request() {
         $url = $this->getRequestUrl();
         $client = new \GuzzleHttp\Client();
-        $res = $client->request('GET', $url);
-        if ($res->getStatusCode() == 200) {
-            return json_decode($res->getBody());
-        } else {
+        try {
+            $res = $client->request('GET', $url);
+            if ($res->getStatusCode() == 200) {
+                return json_decode($res->getBody());
+            } else {
+                return false;
+            }
+        } catch (\Exception $e) {
             return false;
         }
     }
